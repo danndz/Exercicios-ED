@@ -1,0 +1,24 @@
+1) Um aplicativo de edição de texto permite que o usuário use a função 
+"Desfazer" (Ctrl+Z). Cada ação realizada pelo usuário precisa ser 
+desfeita na ordem inversa em que aconteceu. 
+Qual estrutura de dados é mais adequada para essa situação: fila ou 
+pilha? Explique.
+
+Resposta 1: A mais adequada neste caso seria a estrutura de Pilha. Como ela tem o formato LIFO, a atuação dela nessa questão seria mais eficiente para conseguir pegar a última ação feita e desfazê-la.
+
+2) Um hospital precisa organizar os exames realizados em pacientes
+durante o dia. Cada exame é registrado em ordem cronológica. No fim
+do dia, o sistema deve imprimir esses exames na ordem inversa à que
+foram feitos (do último para o primeiro).
+Que estrutura você usaria para guardar os exames: fila ou pilha?
+Implementaria com array ou lista encadeada? Justifique.
+
+Resposta 2: Eu usaria a estrutura pilha, implementada de uma lista encadeada. Pelo fato do formato LIFO, a primeira pessoa que fez o exame estaria em último, com a inversão voltaria ao topo da lista. E a lista encadeada por não ter um número exato de quantos exames seriam feitos em um só dia, porque ela facilita a inserção dinâmica de novos registros, ao contrário dos arrays.
+
+3) Um sistema precisa controlar tarefas usando simultaneamente uma fila e uma pilha.
+As tarefas chegam e são inseridas na fila, mas algumas tarefas prioritárias precisam
+ser movidas imediatamente para a pilha, sendo resolvidas antes das demais.
+Explique qual será a ordem final de execução das tarefas e justifique o porquê,
+considerando o funcionamento das duas estruturas.
+
+Resposta 3: Como tem 2 tipos de tarefas, as normais e as prioritárias, primeiro as tarefas normais serão armazenadas na estrutura de fila (formato FIFO) e serão executadas na ordem de chegada. As tarefas prioritárias são armazenadas na estrutura de pilha (formato  LIFO) e serão executadas antes das tarefas normais, sendo a última adicionada, a primeira que será executada.
